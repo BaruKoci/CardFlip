@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    height: 500px;
+    width: 400px;
+    position: relative;
+}
+
+.card-container div {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+
+.card-container .card-back {
+    background-color: green;
+}
+
+.card-container.kocka .card-back {
+    transform: rotateY(-180deg)
+}
+
+.card-container .card-front {
+    background-image: url("../img/Obrázek\ WhatsApp\,\ 2024-04-01\ v\ 14.26.24_df5c96ed.jpg");
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+.card-container.card-container.kocka .card-front {
+    transform: rotateY(0deg);
+}
